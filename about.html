@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="main-mobile.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/6c931a9bea.js" crossorigin="anonymous"></script>
+    <button class="myHanburger myHamburgerLine" id="menuBtn" onclick="menuToggle()">
+        <span>Menu </span>
+    </button>
+    <button id="contectShow" onclick="contactToggle()"><i class="fas fa-comment-dots"></i></button>
+    <div id="contactWrap">
+        <form action="#" class="contactForm">
+            <h3>Contact with us</h3>
+            <input type="text" placeholder="Name"/>
+            <input type="text" placeholder="Email"/>
+            <input type="text" placeholder="Phone"/>
+            <textarea name="message" id="" cols="1" rows="7"></textarea>
+            <input type="submit" class="myBtn" value="Send"/>
+        </form>
+    </div>
+    <header id="myHeader">
+        <section class="siteHeader">
+            <nav class="navMenu">
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="about.html" data-text="About">About</a></li>
+                    <li><a href="#" data-text="Galery">Galery</a></li>
+                    <li><a href="#" data-text="News">News</a></li>
+                    <li><a href="#" data-text="Contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+
+
+
+
+    <section class="content">
+        <section class="container">
+            <h1>About us</h1>
+        </section>
+
+        <section class="messageBlock">
+            <section class="container">
+                <div class="messageText">
+                    <h2 class="blockTitle">Main Information</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quam molestiae similique corporis autem sunt, voluptatum natus minima accusamus magnam magni temporibus? Beatae dolore veniam aliquid numquam magni animi tempora quidem eos at doloremque placeat dicta sint aperiam dignissimos enim consequuntur aspernatur, eaque officiis harum maiores? Quo illum itaque libero?</p>
+                </div>
+                <div class="messageImages">
+                    <img src="img/ofice4.jpg">
+                </div>
+            </section>
+        </section>
+
+
+        <section class="ourTeam">
+            <section class="container">
+                <h2 class="blockTitle">Our Team</h2>
+                <div class="teamSlides">
+                    <div class="nextMove">
+                        <button onclick="prevSlide()">
+                            <img src="img/nextImg.png">
+                        </button>
+                    </div>
+                    <div class="teamSliderWrap">
+                        <div id="teamSlider">
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/Igor_Zariy.jpg" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Ihor Zhariy</h3>
+                                        <h5>CEO.</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Ideological mastermind of the company. Strong Knowledge of the web development area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/team_2.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Semen Surname</h3>
+                                        <h5>Web Development Architect</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Technical mentor of the company.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/team_3.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Olena Surname</h3>
+                                        <h5>DevOps Expert</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Cloud Specialist. Infrastructure master.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/team_4.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Maksym Polischuk</h3>
+                                        <h5>Senior DevOps engineer</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>CI/CD expert. Strong background in web development</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/team_5.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Roman Humeniuk</h3>
+                                        <h5>Technical Project Manager</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Certified Agile Specialist. Strong Background in DevOps engineering</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/team_2.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Paver Makukha</h3>
+                                        <h5>Senior Full-stack Web developer</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Ideological mastermind of the company. Strong Knowledge of the web development area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="face face1">
+                                    <img src="img/Sergei_Sor.png" alt="">
+                                </div>
+                                <div class="face face2">
+                                    <div class="information">
+                                        <h3>Sergei Serockinskii</h3>
+                                        <h5>Full-stack Web developer</h5>
+                                        <div class="socials">
+                                            <ul class="socialIcons">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>Certified Web Application Development Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prevMove">
+                        <button onclick="nextSlide()">
+                            <img src="img/prevImg.png">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="messageBlock">
+            <section class="container">
+                <div class="messageImages">
+                    <img src="img/ofice1.jpg">
+                    <img src="img/ofice2.jpg">
+                    <img src="img/ofice3.jpg">
+                </div>
+                <div class="messageText">
+                    <h2 class="blockTitle">Career and Study</h2>
+                    <h3>Grow as an engineer. Grow with us. We are the future.</h3>
+                    <div>
+                        <ul>
+                            <li>Bootcamps* - possible way for future to organize camps with people and collect best ones to company as engineers</li>
+                            <li>Learning Courses - Info about our paid courses</li>
+                            <li>Job opportunities - jobs we have in company</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <section class="partners">
+            <div class="container">
+                <h2 class="blockTitle">They trust us</h2>
+                <div>
+                    <img src="img/firms.png" alt="">
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+    <footer>
+        <h2 class="blockTitle">Next Level Full - Lifecycle software development </h2>
+        <h3>Success of your ideas with our experience</h3>
+        <div class="socialWrap">
+            <ul class="socialIcons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <p>Copywriting &copy February 2020</p>
+    </footer>
+    <script src="js/function.js"></script>
+    <script src="js/teamslider.js"></script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+$mainColor: #236b02;
+
+@import url('https://fonts.googleapis.com/css?family=Teko:400,700&display=swap&subset=devanagari');
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    color: black;
+    width: 100vw;
+    overflow-x: hidden;
+    header{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        min-width: 400px;
+        height: 100vh;
+        margin-top: -100vh;
+        background: #1b1b1b;
+        transition: 1s ease;
+        z-index: 1000;
+        font-family: 'Teko', 'Play', sans-serif;
+        .siteHeader{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .navMenu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                ul{
+                    position: relative;
+                    li{
+                        position: relative;
+                        width: 100%;
+                        list-style: none;
+                        padding: 0 20px;
+                        margin: 5px 0px;
+                        overflow: hidden;
+                        display: table;
+                        a{
+                            position: relative;
+                            color: white;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-size: 3em;
+                            font-weight: 700;
+                            line-height: 1em;
+                            text-align: center;
+                            padding-top: 12px;
+                            display: inline-block;
+                            transition: 0.5s ease-in-out;
+                        }
+                        a::before{
+                            content: attr(data-text);
+                            position: absolute;
+                            bottom: 100%;
+                            left: 0;
+                            color: white;
+                        }
+                    }
+                    li:before{
+                        content: '';
+                        position: absolute;
+                        background: $mainColor;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.5s ease-in-out;
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                    }
+                    li:hover{
+                        a{
+                            transform:  translateY(100%);
+                            color: white;
+                        }
+                    }
+                    li:hover:before{
+                        transition: transform 0.5s ease-in-out;
+                        transform: scaleY(1);
+                        transform-origin: top;
+                    }
+                }
+            }
+        }
+    }
+    header.menuActive{
+        /*Стили для активного меню*/
+        margin-top: 0;
+    }
+    
+    .myHanburger{
+        /*Стили для кнопки меню*/
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        margin: 0;
+        width: 60px;
+        height: 60px;
+        font-size: 0;
+        box-shadow: none;
+        overflow: hidden;
+        border: none;
+        z-index: 1001;
+    }
+    .myHanburger:focus{
+        /*Убираем выделения кнопкии меню при нажатии*/
+        outline: none;
+    }
+    .myHanburger span{
+        /*Стили для полосок внутри кнопки меню*/
+        display: block;
+        position: absolute;
+        top: 28px;
+        width: 48px;
+        height: 4px;
+        background: #fff;
+    }
+    .myHanburger span:before{
+        /*Стили для верхней полоски внутри кнопки меню*/
+        content: "";
+        display: block;
+        position: absolute;
+        top: -16px;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+    }
+    .myHanburger span:after{
+        /*Стили для нижней полоски внутри кнопки меню*/
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -16px;
+        width: 100%;
+        height: 4px;
+        background: #fff;
+    }
+    .myHanburger{
+        background: #222222;
+    }
+    .myHanburger span{
+        /*Задаем длительность анимации для смены background полоски кнопки меню*/
+        transition: background 0s 0.3s;
+    }
+    .myHanburger span:before{
+        /*Задаем длительность анимации для верхней полоски кнопки меню*/
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s,0s;
+        transition-property: top, transform;
+    }
+    .myHanburger span:after{
+        /*Задаем длительность анимации для нижней полоски кнопки меню*/
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s,0s;
+        transition-property: bottom, transform;
+    }
+    .myHanburger.isActive{
+        /*Стили для активной кнопки меню*/
+        color: white
+    }
+    .myHanburger.isActive span{
+        /*Стили для полосок активной кнопки меню*/
+        background: none;
+    }
+    .myHanburger.isActive span:before{
+        /*Стили для верхней полоски активной кнопки меню*/
+        top: 0;
+        transform: rotate(-45deg);/*Поворот на -45 градусов*/
+        transition-delay: 0s, 0.3s;
+    }
+    .myHanburger.isActive span:after{
+        /*Стили для нижней полоски активной кнопки меню*/
+        bottom: 0;
+        transform: rotate(45deg);
+        transition-delay: 0s, 0.3s;
+    }
+    
+    #contectShow{
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background: $mainColor;
+        border: none;
+        border-radius: 50%;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        z-index: 1002;
+        span{
+            display: block;
+        }
+    }
+    #contactWrap{
+        display: block;
+        min-width: 400px;
+        position: fixed;
+        bottom: 50px;
+        left: 10px;
+        background: #222222;
+        z-index: 1001;
+        color: white;
+        font-size: 1.3em;
+        margin-left: -110%;
+        transition: 0.5s all ease-in-out;
+        h3{
+            text-align: center;
+            font-family: 'Teko', 'Play', sans-serif;
+            margin: 30px 0px;
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+        .contactForm{
+            input, textarea{
+                background: none;
+                border: none;
+                border-bottom: 1px solid $mainColor;
+                display: block;
+                width: 96%;
+                margin: 20px auto;
+                color: white;
+                padding: 20px;
+            }
+            .myBtn{
+                max-width: 200px;
+                background: $mainColor;
+                border: none;
+            }
+        }
+    }
+    #contactWrap.isActive{
+        margin-left: 0;
+    }
+    .banner{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            object-fit: cover;
+        }
+        .gradientblock{
+            background: transparent;
+            background:  linear-gradient(to bottom, black 0%, transparent 100%);
+            height: 100vh; 
+            width: 100vw;
+            left: 0; 
+            position: absolute; 
+            top: 0; 
+            z-index: 2; 
+        }
+        .siteTitle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Teko', 'Play', sans-serif;
+            h1{
+                text-align: center;
+                font-size: 8em;
+                padding: 10px;
+                cursor: pointer;
+                span{
+                    display: inline-flex;
+                    color: $mainColor;
+
+                }
+                span:nth-child(even){
+                    overflow: hidden;
+                    transition: 0.5s ease-in-out;
+                    color: white;
+                    border-bottom: 8px solid $mainColor;
+                    letter-spacing: -1em;
+                }
+            }
+            h1:hover{
+                span:nth-child(even){
+                    letter-spacing: 0em;
+                }
+                span:nth-child(2){
+                    transition-delay: 0s;
+                }
+                span:nth-child(4){
+                    transition-delay: 0.5s;
+                }
+                span:nth-child(6){
+                    transition-delay: 1s;
+                }
+                span:nth-child(8){
+                    transition-delay: 1.5s;
+                }
+            }
+        }
+    }
+    .content{
+        font-size: 1.3em;
+        .container{
+            max-width: 1400px;
+            position: relative;
+            margin: 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .blockTitle{
+            margin: 100px 0px;
+            text-align: center;
+            letter-spacing: 10px;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            font-family: 'Teko', 'Play', sans-serif;
+        }
+        h4{
+            margin: 100px 0px;
+            text-align: center;
+            letter-spacing: 10px;
+            font-family: 'Teko', 'Play', sans-serif;
+        }
+        h3{
+            font-family: 'Teko', 'Play', sans-serif;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+            letter-spacing: 10px;
+            font-family: 'Teko', 'Play', sans-serif;
+            margin-top: 100px;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        .eyesToppers{
+            background: #181818;
+            color: white;
+            padding: 20px;
+            padding-bottom: 100px;
+            .eyesToppersWrap{
+                background: #181818;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                grid-auto-rows: minmax(100px, auto);
+                grid-column-gap: 20px;
+                grid-row-gap: 10px; 
+                justify-content: center;
+                color: $mainColor;
+                .eyesTopper{
+                    background: white;
+                    transition: 1.5s ease;
+                    cursor: pointer;
+                    padding: 35px 20px;
+                    .iconWrap{
+                        text-align: center;
+                        font-size: 8em;
+                        margin: 20px;
+                        margin-bottom: 40px;
+                    }
+                    ul{
+                        display: block;
+                        margin: 10px;
+                    }
+                    p{
+                        font-size: 1.1em;
+                        text-align: justify;
+                    }
+                }
+                .eyesTopper:hover{
+                    box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.85);
+                    background: $mainColor;
+                    color: white;
+                }
+            }
+        }
+
+
+        .messageBlock{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            color: black;
+            margin: 100px 0px;
+            .messageText{
+                display: block;
+                max-width: 900px;
+                padding: 100px 20px;
+                h3{
+                    text-align: center;
+                    margin: 20px 0px 40px;
+                }
+                div{
+                    display: block;
+                    margin-left: 45px;
+                }
+                ul{
+                    li{
+                        list-style-type: square;
+                    }
+                }
+            }
+            .messageImages{
+                position: relative;
+                display: block;
+                width: 500px;
+                padding: 20px;
+                height: 500px;
+                img{
+                    display: block;
+                    width: 75%;
+                    position: absolute;
+                    box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.85);
+                }
+                img:nth-child(1){
+                    right: 0;
+                    bottom: 0;
+                }
+                img:nth-child(2){
+                    top: 0;
+                    right: 0;
+                }
+                img:nth-child(3){
+                    top: 150px;
+                    left: 0;
+                }
+            }
+            .messageImages:after{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                right: 30px;
+                bottom: 30px;
+                border: 4px solid $mainColor;
+            }
+        }
+
+        .mainCharacteristic{
+            padding: 100px 0px;
+            background: #333;
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            .container{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+            .textBlock{
+                padding: 10px;
+                div{
+                    display: block;
+                    margin-left: 45px;
+                }
+            }
+            .imgBlock{
+                max-width: 500px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .mainCharacteristic:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $mainColor;
+            clip-path: polygon(0 0, 28% 0, 13% 100%, 0% 100%);
+        }
+
+
+
+        .ourTeam{
+            width: 100%;
+            background: #2a2a2a;
+            color: white;
+            padding-bottom: 100px;
+            .nextMove, .prevMove{
+                display: flex;
+                height: 100%;
+                max-width: 100px;
+                align-items: center;
+                button{
+                    border: none;
+                    background: none;
+                    color: $mainColor;
+                    font-size: 1.3em;
+                    cursor: pointer;
+                    position: relative;
+                    height: 120px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+            .teamSlides{
+                max-width: 1400px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .teamSliderWrap{
+                    position: relative;
+                    overflow: hidden;
+                    padding: 25px 0px;
+                    #teamSlider{
+                        display: flex;
+                        flex-direction: row;
+                        width: 3000px;
+                        justify-content: flex-start;
+                        transition: 1s all ease;
+                        margin-left: 0px;
+                        .slide{
+                            display: flex;
+                            width: 370px;
+                            height: 500px;
+                            margin: 0 30px;
+                            position: relative;
+                            .face{
+                                width: 98%;
+                                height: 98%;
+                                box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.85);
+                                position: absolute;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .face1{
+                                top: 0px;
+                                left: 0px;
+                                transition-property: left, z-index, transform;
+                                transition-delay: 0s, 0.5s, 0.5s;
+                                transition-duration: 0.5s, 0s, 0.5s;
+                                z-index: 2;
+                                transform: translate(-10px, -10px);
+                            }
+                            .face2{
+                                background: white;
+                                color: black;
+                                top: 0px;
+                                right: 0px;
+                                transition-property: left, z-index, transform;
+                                transition-delay: 0s, 0.5s, 0.5s;
+                                transition-duration: 0.5s, 0s, 0.5s;
+                                z-index: 1;
+                                .information{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 20px;
+                                    h3, h5{
+                                        text-align: center;
+                                        font-family: 'Teko', 'Play', sans-serif;
+                                        font-size: 1.4em;
+                                    }
+                                    p{
+                                        text-align: justify;
+                                    }
+                                    .socials{
+                                        display: block;
+                                    }
+                                    ul.socialIcons{
+                                        margin: 20px 0px;
+                                        width: 320px;
+                                        list-style: none;
+                                        z-index: 10;
+                                        opacity: 1;
+                                        display: -webkit-flex;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        li{
+                                            width: 50px;
+                                            height: 40px;
+                                        }
+                                        a{
+                                            color: black;
+                                            background: none;
+                                            font-size: 1.4em;
+                                        }
+                                        a:hover{
+                                            background: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .slide:hover{
+                            .face1{
+                                transition-property: transform, z-index, left;
+                                transition-delay: 0s, 0.5s, 0.5s;
+                                transition-duration: 0.5s, 0s, 0.5s;
+                                transform: translate(-190px, -10px);
+                                z-index: 1;
+                                left: 160px;
+                            }
+                            .face2{
+                                transition-property: transform, z-index, left;
+                                transition-delay: 0s, 0.5s, 0.5s;
+                                transition-duration: 0.5s, 0s, 0.5s;
+                                transform: translate(160px, -10px);
+                                z-index: 2;
+                                left: -160px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .partners{
+            margin: 100px 0px;
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+    footer{
+        padding: 100px 0px;
+        background: #222222;
+        color: white;
+        text-align: center;
+        .socialWrap{
+            width: 320px;
+            margin: 20px auto;
+            ul.socialIcons{
+                margin: 20px 0px;
+                width: 320px;
+                list-style: none;
+                z-index: 10;
+                opacity: 1;
+                display: -webkit-flex;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                li{
+                    width: 50px;
+                    height: 40px;
+                }
+                a{
+                    color: white;
+                    background: none;
+                    font-size: 1.4em;
+                }
+                a:hover{
+                    background: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@media (max-width: 1300px) {
+  body .banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 750px) {
+  body .banner .siteTitle h1 {
+    font-size: 4em;
+  }
+  body .content .messageBlock .messageImages {
+    width: 100% !important;
+  }
+  body .content .ourTeam .nextMove button, body .content .ourTeam .prevMove button {
+    height: 60px;
+  }
+  body .content .ourTeam .nextMove button img, body .content .ourTeam .prevMove button img {
+    height: 100%;
+  }
+  body .content .ourTeam .teamSlides {
+    width: 100%;
+  }
+}
