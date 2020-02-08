@@ -37,6 +37,29 @@
                 }
                 .teamSlides{
                     width: 100%;
+                    .slide{
+                        width: 320px !important;
+                        height: 450px !important;
+                        .face{
+                            width: 320px !important;
+                            height: 450px !important;
+                            img{
+                                width: 320px !important;
+                                height: auto;
+                            }
+                        }
+                        .face2{
+                            .information{
+                                width: 320px !important;
+                                padding: 20px;
+                            }
+                        }
+                    }
+                    .slide:hover{
+                        .face2{
+                            transform: translate(120px, -10px) !important;
+                        }
+                    }
                 }
             }
         }
