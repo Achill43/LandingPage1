@@ -1,20 +1,42 @@
 var slideWidth=0;
 var countSlides=document.getElementsByClassName('slide').length;
-var maxWidth=(countSlides-2)*430;
+
+var maxWidth=0;
+if(document.documentElement.clientWidth>750){
+    maxWidth=(countSlides-2)*430;
+}
+else{
+    maxWidth=countSlides*380;
+}
 
     function nextSlide(){
-        slideWidth=slideWidth-430;
+        if(document.documentElement.clientWidth>750){
+            slideWidth=slideWidth-430;
+        }
+        else{
+            slideWidth=slideWidth-380;
+        }
         if(slideWidth*(-1)<maxWidth){
             var sliderWrap=document.getElementById('teamSlider');
             marginLeft=slideWidth;
             sliderWrap.style.marginLeft=marginLeft+'px';
         }
         else{
-            slideWidth=slideWidth+430;
+            if(document.documentElement.clientWidth>750){
+                slideWidth=slideWidth+430;
+            }
+            else{
+                slideWidth=slideWidth+380;
+            }
         }
     }
     function prevSlide(){
-        slideWidth=slideWidth+430;
+        if(document.documentElement.clientWidth>750){
+            slideWidth=slideWidth+430;
+        }
+        else{
+        slideWidth=slideWidth+380;
+        }
         if(slideWidth<=0){
             var sliderWrap=document.getElementById('teamSlider');
             sliderWrap.style.marginLeft=slideWidth+'px';

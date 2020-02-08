@@ -213,7 +213,8 @@ body{
     }
     #contactWrap{
         display: block;
-        min-width: 400px;
+        max-width: 500px;
+        min-width: 350px;
         position: fixed;
         bottom: 50px;
         left: 10px;
@@ -221,7 +222,7 @@ body{
         z-index: 1001;
         color: white;
         font-size: 1.3em;
-        margin-left: -110%;
+        margin-left: -120%;
         transition: 0.5s all ease-in-out;
         h3{
             text-align: center;
@@ -310,13 +311,13 @@ body{
                     transition-delay: 0s;
                 }
                 span:nth-child(4){
-                    transition-delay: 0.5s;
+                    transition-delay: 0.2s;
                 }
                 span:nth-child(6){
-                    transition-delay: 1s;
+                    transition-delay: 0.4s;
                 }
                 span:nth-child(8){
-                    transition-delay: 1.5s;
+                    transition-delay: 0.8s;
                 }
             }
         }
@@ -378,6 +379,7 @@ body{
                     transition: 1.5s ease;
                     cursor: pointer;
                     padding: 35px 20px;
+                    font-size: 0.9em;
                     .iconWrap{
                         text-align: center;
                         font-size: 8em;
@@ -389,7 +391,7 @@ body{
                         margin: 10px;
                     }
                     p{
-                        font-size: 1.1em;
+                        font-size: 0.9em;
                         text-align: justify;
                     }
                 }
@@ -542,7 +544,7 @@ body{
                         flex-direction: row;
                         width: 3000px;
                         justify-content: flex-start;
-                        transition: 1s all ease;
+                        transition: 1s all ease-in-out;
                         margin-left: 0px;
                         .slide{
                             display: flex;
@@ -638,7 +640,7 @@ body{
                             .face2{
                                 transition-property: transform, z-index, left;
                                 transition-delay: 0s, 0.5s, 0.5s;
-                                transition-duration: 0.5s, 0s, 0.5s;
+                                transition-duration: 0.5s, 0s, 0.0s;
                                 transform: translate(160px, -10px);
                                 z-index: 2;
                                 left: -160px;
@@ -663,6 +665,13 @@ body{
         background: #222222;
         color: white;
         text-align: center;
+        h2, h3{
+            letter-spacing: 6px;
+            font-family: 'Teko', 'Play', sans-serif;
+        }
+        h2{
+            text-transform: uppercase;
+        }
         .socialWrap{
             width: 320px;
             margin: 20px auto;

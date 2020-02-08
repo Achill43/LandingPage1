@@ -24,4 +24,23 @@
   body .content .ourTeam .teamSlides {
     width: 100%;
   }
+  body .content .ourTeam .teamSlides .slide {
+    width: 320px !important;
+    height: 450px !important;
+  }
+  body .content .ourTeam .teamSlides .slide .face {
+    width: 320px !important;
+    height: 450px !important;
+  }
+  body .content .ourTeam .teamSlides .slide .face img {
+    width: 320px !important;
+    height: auto;
+  }
+  body .content .ourTeam .teamSlides .slide .face2 .information {
+    width: 320px !important;
+    padding: 20px;
+  }
+  body .content .ourTeam .teamSlides .slide:hover .face2 {
+    transform: translate(120px, -10px) !important;
+  }
 }
