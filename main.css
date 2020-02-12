@@ -737,6 +737,111 @@ body .content .partners img {
   width: 100%;
 }
 
+body .content .social .container {
+  display: flex;
+  flex-direction: column;
+}
+
+body .content .social .socialWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+body .content .social .socialWrapper a {
+  display: flex;
+  min-width: 320px;
+  min-height: 320px;
+  margin: 5px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+body .content .social .socialWrapper a span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+}
+
+body .content .social .socialWrapper a .icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+body .content .social .socialWrapper a .icon i {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 5.5em;
+}
+
+body .content .social .socialWrapper a .title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+body .content .social .socialWrapper a:hover .icon {
+  transform: scale(0.5);
+  top: -20%;
+}
+
+body .content .social .socialWrapper a:hover .title {
+  top: 0%;
+}
+
+body .content .social .socialWrapper #facebook {
+  background: #4343aa;
+}
+
+body .content .social .socialWrapper #linkedin {
+  background: #2323a5;
+}
+
+body .content .social .socialWrapper #instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 25%, #d6249f 60%, #285AEB 90%);
+}
+
+body .content .social .socialWrapper #youtube {
+  background: #b81919;
+}
+
+body .content .googleMap {
+  background: #222;
+  color: white;
+}
+
+body .content .googleMap #map {
+  background: white;
+  width: 100%;
+  height: 80vh;
+}
+
 body footer {
   padding: 100px 0px;
   background: #222222;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="main-mobile.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/6c931a9bea.js" crossorigin="anonymous"></script>
+    <button class="myHanburger myHamburgerLine" id="menuBtn" onclick="menuToggle()">
+        <span>Menu </span>
+    </button>
+    <button id="contectShow" onclick="contactToggle()"><i class="fas fa-comment-dots"></i></button>
+    <div id="contactWrap">
+        <form action="#" class="contactForm">
+            <h3>Contact with us</h3>
+            <input type="text" placeholder="Name"/>
+            <input type="text" placeholder="Email"/>
+            <input type="text" placeholder="Phone"/>
+            <textarea name="message" id="" cols="1" rows="7"></textarea>
+            <input type="submit" class="myBtn" value="Send"/>
+        </form>
+    </div>
+    <header id="myHeader">
+        <section class="siteHeader">
+            <nav class="navMenu">
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="about.html" data-text="About">About</a></li>
+                    <li><a href="#" data-text="Galery">Galery</a></li>
+                    <li><a href="#" data-text="News">News</a></li>
+                    <li><a href="contacts.html" data-text="Contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+
+
+    <section class="content">
+        <div><h1>Our Contacts</h1></div>
+        
+        <section class="social">
+            <section class="container">
+                <h2 class="blockTitle">We in Socials</h2>
+                <div class="socialWrapper">
+                    <div class="item">
+                        <a href="#" id="facebook">
+                            <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                            <div class="title"><span>Facebook</span></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" id="linkedin">
+                            <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="title"><span>Linkedin</span></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" id="instagram">
+                            <div class="icon"><i class="fab fa-instagram"></i></div>
+                            <div class="title"><span>Instagram</span></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" id="youtube">
+                            <div class="icon"><i class="fab fa-youtube"></i></div>
+                            <div class="title"><span>Youtube</span></div>
+                            
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="googleMap">
+            <section class="container">
+                <h2 class="blockTitle">Our location</h2>
+            </section>
+            <div id="map"></div>
+        </section>
+
+    </section>
+    <footer>
+        <h2 class="blockTitle">Next Level Full - Lifecycle software development </h2>
+        <h3>Success of your ideas with our experience</h3>
+        <div class="socialWrap">
+            <ul class="socialIcons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <p>Copywriting &copy February 2020</p>
+    </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2yGsK6YLla8ysHz7bxgtCipjscrxkMok&callback=initMap"></script>
+    <script src="js/function.js"></script>
+    <script src="js/mapConfig.js"></script>
+</body>
+</html>
