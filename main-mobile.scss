@@ -9,6 +9,17 @@
                 object-fit: cover;
             }
         }
+        .content{
+            .gallery{
+                grid-template-areas: 
+                                    "img-1 img-1 img-1 img-2"
+                                    "img-3 img-4 img-4 img-4"
+                                    "img-3 img-5 img-5 img-5"
+                                    "img-7 img-7 img-6 img-6";
+                
+            }
+        }
+        
     }
 }
 @media(max-width: 750px){
@@ -21,6 +32,16 @@
             }
         }
         .content{
+            .gallery{
+                grid-template-areas: 
+                                    "img-1 img-1 img-1 img-1" 
+                                    "img-2 img-2 img-2 img-2" 
+                                    "img-3 img-3 img-3 img-3" 
+                                    "img-4 img-4 img-4 img-4" 
+                                    "img-5 img-5 img-5 img-5" 
+                                    "img-6 img-6 img-6 img-6" 
+                                    "img-7 img-7 img-7 img-7";
+            }
             .messageBlock{
                 .messageImages{
                     width: 100% !important;
