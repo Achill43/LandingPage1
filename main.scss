@@ -789,6 +789,28 @@ body{
                     background: rgba(0, 0, 0, 0.692);
                     opacity: 0;
                     transition: 0.5s all ease;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-top: 7px solid white;
+                        border-left: 7px solid white;
+                        z-index: 5;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-bottom: 7px solid white;
+                        border-right: 7px solid white;
+                        z-index: 5;
+                    }
                     h3{
                         margin: 30px 0px;
                         text-transform: uppercase;
@@ -813,6 +835,7 @@ body{
                         opacity: 1;
                     }
                 }
+                
             }
             .img-1{
                 grid-area: img-1;
@@ -839,6 +862,57 @@ body{
             }
         }
 
+        .newsWrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap !important;
+            align-items: center;
+            justify-content: center;
+            .new{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                .imgBox{
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-top: 7px solid $mainColor;
+                        border-left: 7px solid $mainColor;
+                        z-index: 5;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-bottom: 7px solid $mainColor;
+                        border-right: 7px solid $mainColor;
+                        z-index: 5;
+                    }
+                }
+                .textBox{
+                    max-width: 1000px;
+                    min-width: 320px;
+                    background-color: #222;
+                    color: white;
+                    padding: 30px;
+                }
+            }
+            .new:nth-child(even){
+                flex-direction: row-reverse;
+            }
+        }
     }
     footer{
         padding: 100px 0px;
