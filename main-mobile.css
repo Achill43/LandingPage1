@@ -11,9 +11,27 @@
   }
 }
 
+@media (max-width: 1200px) {
+  body .content .newsWrap {
+    flex-wrap: wrap !important;
+  }
+  body .content .newsWrap .new {
+    width: 48% !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  body .content .newsWrap .new:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 750px) {
   body .banner .siteTitle h1 {
     font-size: 4em;
+  }
+  body .content .newsWrap .new {
+    width: 100% !important;
+    flex-direction: column;
   }
   body .content .gallery {
     grid-template-areas: "img-1 img-1 img-1 img-1"  "img-2 img-2 img-2 img-2"  "img-3 img-3 img-3 img-3"  "img-4 img-4 img-4 img-4"  "img-5 img-5 img-5 img-5"  "img-6 img-6 img-6 img-6"  "img-7 img-7 img-7 img-7";
