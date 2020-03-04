@@ -421,11 +421,13 @@ body .content .eyesToppers .eyesToppersWrap {
 }
 
 body .content .eyesToppers .eyesToppersWrap .eyesTopper {
-  background: white;
+  background: #333;
+  color: white;
   transition: 1.5s ease;
   cursor: pointer;
   padding: 35px 20px;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  border-radius: 10px;
 }
 
 body .content .eyesToppers .eyesToppersWrap .eyesTopper .iconWrap {
@@ -433,6 +435,14 @@ body .content .eyesToppers .eyesToppersWrap .eyesTopper .iconWrap {
   font-size: 8em;
   margin: 20px;
   margin-bottom: 40px;
+}
+
+body .content .eyesToppers .eyesToppersWrap .eyesTopper .textWrap {
+  position: absolute;
+}
+
+body .content .eyesToppers .eyesToppersWrap .eyesTopper h3 {
+  font-size: 1em;
 }
 
 body .content .eyesToppers .eyesToppersWrap .eyesTopper ul {
@@ -446,9 +456,8 @@ body .content .eyesToppers .eyesToppersWrap .eyesTopper p {
 }
 
 body .content .eyesToppers .eyesToppersWrap .eyesTopper:hover {
-  box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.85);
-  background: #236b02;
-  color: white;
+  box-shadow: -15px 10px 15px rgba(35, 107, 2, 0.3);
+  color: #236b02;
 }
 
 body .content .messageBlock {
@@ -632,10 +641,10 @@ body .content .ourTeam .teamSlides .teamSliderWrap #teamSlider .slide .face {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 body .content .ourTeam .teamSlides .teamSliderWrap #teamSlider .slide .face img {
-  width: 100%;
   height: 100%;
 }
 
@@ -1014,6 +1023,19 @@ body .content .newsWrap .new .textBox {
   background-color: #222;
   color: white;
   padding: 30px;
+}
+
+body .content .newsWrap .new .textBox a {
+  color: #236b02;
+  text-decoration: none;
+  padding: 0px 20px;
+  font-family: 'Teko', 'Play', sans-serif;
+  letter-spacing: 5px;
+  transition: 0.5s all ease;
+}
+
+body .content .newsWrap .new .textBox a:hover {
+  color: white;
 }
 
 body .content .newsWrap .new:nth-child(even) {
